@@ -14,6 +14,7 @@ A JavaScript application that allows users to manage a collection of books. User
 * Track which books have been read.
 * Display a message when the library is empty.
 * Validate user inputs.
+* Local storage
 
 ## Technologies Used
 
@@ -23,7 +24,12 @@ A JavaScript application that allows users to manage a collection of books. User
 
 ## What I Learned
 
-*To be updated as the project progresses.*
+* I learnt how to store and retrieve data in local storage.
+* I learnt how to make web responsive.
+* I learnt  more on code structure.
+* I learnt about replaceChild in DOM.
+* I learnt how to us FormData to retrieve data
+* i learnt about focus-visible, which enable user to see the button click
 
 ---
 
@@ -31,14 +37,20 @@ A JavaScript application that allows users to manage a collection of books. User
 
 ## Project Structure
 
-
+Library-management-app/
+├── index.html       # HTML structure for the collection
+├── style.css        # Book card layout and application styles
+├── script.js        # Book collection logoc, book card, display , and DOM interactions
+└── README.md
 
 
 
 ---
 
 ## Future Improvements
-
+* Buttons to see all book, all read and all not read.
+* make the book card buttons to be the same size when mark as read and as not read
+* Introduce new features such as category etc
 
 
 ---
@@ -49,6 +61,7 @@ A JavaScript application that allows users to manage a collection of books. User
 
 
 ## Author
+Edeh Maligue Ifeanyi
 
 
 
@@ -57,7 +70,7 @@ A JavaScript application that allows users to manage a collection of books. User
 
 ## Live Demo
 
-👉 [Click here to view the live demo](coming soon)
+👉 [Click here to view the live demo](https://edehify.github.io/Library-management-app/)
 
 
 
