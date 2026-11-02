@@ -8,7 +8,6 @@ A JavaScript application that allows users to manage a collection of books. User
 
 * Add new books to the library.
 * Remove books from the collection.
-* Display all books in the library.
 * Update a book's reading status.
 * Find a specific book.
 * View the book collection.
