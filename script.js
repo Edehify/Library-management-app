@@ -137,7 +137,7 @@ const displayController = (() => {
 
     // create update status button
     const statusButton = document.createElement("button");
-    statusButton.textContent = book.status == "Read"  ? "Mark as not read" : "Mark as read";
+    statusButton.textContent = book.status === "Read"  ? "Mark as not read" : "Mark as read";
     statusButton.addEventListener("click", () => {
         libraryModule.toggleReadStatus(book);
          // update display text for read status
@@ -189,20 +189,21 @@ const displayController = (() => {
 
     const statusMessage = document.getElementById("status-message")
     function updateStatus(status) {
+        const bookLength = libraryModule.getBook().length;
          if(status === "empty") {
             statusMessage.textContent = "Your library is empty. Add a book to get started.";
         }else if(status === "all") {
-            if(libraryModule.getBook().length > 1)
-            statusMessage.textContent = `Showing all ${libraryModule.getBook().length} books`;
-            else if(libraryModule.getBook().length == 1)
-                 statusMessage.textContent = `Showing all ${libraryModule.getBook().length} book`;
+            if(bookLength > 1)
+            statusMessage.textContent = `Showing all ${bookLength} books`;
+            else if(bookLength === 1)
+                 statusMessage.textContent = `Showing all ${bookLength} book`;
         }else if(status === "no match") {
              statusMessage.textContent = "No books found matching your search.";
         }else if(status === 1) {
         
-            statusMessage.textContent = `${status} book found out of ${libraryModule.getBook().length} total books`;
+            statusMessage.textContent = `${status} book found out of ${bookLength} total books`;
         }else if(status > 1) {
-            statusMessage.textContent = `${status} books found out of ${libraryModule.getBook().length} total books`;
+            statusMessage.textContent = `${status} books found out of ${bookLength} total books`;
         }
     }
 
