@@ -23,7 +23,15 @@ const libraryModule =(()=> {
     function loadBook() {
         const result = localStorage.getItem("libraryBook");
         if(result){
-             return JSON.parse(result);
+            try {
+                return Array.isArray(JSON.parse(result);) ? JSON.parse(result); : [];
+            } catch(error){
+                console.error("Unable to load book",error);
+                return [];
+                
+                }
+            
+             
              
         }else
             return [];
